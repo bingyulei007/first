@@ -4,6 +4,7 @@ import java.net.URL;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.test.TestRestTemplate;
@@ -19,7 +20,7 @@ public class Apptest3 {
 
 	@Before
 	public void setUp() throws Exception {
-		this.base = new URL("http://localhost:8080/");
+		this.base = new URL("http://localhost:8088/");
 		template = new TestRestTemplate();
 	}
 

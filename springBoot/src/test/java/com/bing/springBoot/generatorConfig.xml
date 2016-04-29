@@ -7,7 +7,7 @@
     <javaModelGenerator targetPackage="com.bing.model" targetProject="springBoot" />
     <sqlMapGenerator targetPackage="mybatis.sqls" targetProject="springBoot" />
     <javaClientGenerator  targetPackage="com.bing.dao" targetProject="springBoot" type="XMLMAPPER" />
-     <table schema="test" tableName="people" domainObjectName="PeopleModel" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+     <table schema="test" tableName="people" domainObjectName="People" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
     enableSelectByExample="false"  />
   </context>
   

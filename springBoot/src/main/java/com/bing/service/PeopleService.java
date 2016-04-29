@@ -9,12 +9,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bing.dao.PeopleModelMapper;
 import com.bing.model.PeopleModel;
 
 @Service
+@Transactional
 public class PeopleService {
 	@Autowired
 	private PeopleModelMapper peopleModelMapper;
@@ -45,7 +47,7 @@ public class PeopleService {
 		}
 		
 	}
-
+	@Transactional(readOnly=true,propagation=Propagation.SUPPORTS)
 	public PeopleModel getById(String id) {
 		PeopleModel model = peopleModelMapper.getById(id);
 		return model;
